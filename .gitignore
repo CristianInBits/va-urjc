@@ -1,0 +1,20 @@
+# Entorno virtual
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VSCode
+.vscode/
+
+# Outputs (si quieres NO versionar resultados)
+# src/**/output/
+
+# OS
+.DS_Store
+Thumbs.db
