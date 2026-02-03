@@ -17,9 +17,6 @@ def main():
     blur = cv2.GaussianBlur(gray, (5, 5), 0)
     edges = cv2.Canny(blur, 50, 150)
 
-    # Guardar salida
-    out_path = OUTPUT / "edges.png"
-
     # Guardar salidas
     out_original = OUTPUT / "original.png"
     out_gray = OUTPUT / "gray.png"
@@ -35,8 +32,6 @@ def main():
         raise RuntimeError(f"No se pudo guardar: {out_edges}")
 
     print(f"✅ Guardadas:\n- {out_original}\n- {out_gray}\n- {out_edges}")
-
-
 
     # Mostrar (matplotlib)
     img_rgb = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2RGB)
@@ -60,8 +55,6 @@ def main():
 
     plt.tight_layout()
     plt.show()
-
-    print(f"✅ Guardado: {out_path}")
 
 if __name__ == "__main__":
     main()
